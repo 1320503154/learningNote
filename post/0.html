@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LHG的前后端学习笔记 | LHG的前后端学习笔记</title><meta name="author" content="LHG"><meta name="copyright" content="LHG"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一切都是为了实战 javaSpring苍穹外卖项目软件开发整体介绍软件开发流程需求规格说明书:  产品原型:通过静态网页的形式展示:  UI设计:  数据库设计:  接口设计:  上述进行完就是这些了:   角色分工 环境分配 开发-&gt;测试-&gt;生产. 项目介绍功能架构: 产品原型:  展示效果的模型就是产品原型.  先学着,耐住寂寞才能变强,不然图书馆为什么那么多人. 通过产品原型就能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LHG的前后端学习笔记">
+<meta property="og:url" content="http://example.com/post/0.html">
+<meta property="og:site_name" content="LHG的前后端学习笔记">
+<meta property="og:description" content="一切都是为了实战 javaSpring苍穹外卖项目软件开发整体介绍软件开发流程需求规格说明书:  产品原型:通过静态网页的形式展示:  UI设计:  数据库设计:  接口设计:  上述进行完就是这些了:   角色分工 环境分配 开发-&gt;测试-&gt;生产. 项目介绍功能架构: 产品原型:  展示效果的模型就是产品原型.  先学着,耐住寂寞才能变强,不然图书馆为什么那么多人. 通过产品原型就能">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-03-25T04:09:14.715Z">
+<meta property="article:modified_time" content="2024-04-09T12:48:10.426Z">
+<meta property="article:author" content="LHG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/post/0.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LHG的前后端学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-09 20:48:10'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="LHG的前后端学习笔记"><span class="site-name">LHG的前后端学习笔记</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-03-25T04:09:14.715Z" title="Created 2024-03-25 12:09:14">2024-03-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-09T12:48:10.426Z" title="Updated 2024-04-09 20:48:10">2024-04-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一切都是为了实战"><a href="#一切都是为了实战" class="headerlink" title="一切都是为了实战"></a>一切都是为了实战</h1><p><img src="https://s2.loli.net/2024/03/25/xVqo9vkJBUAywDZ.png" alt="image-20240325132434599"></p>
+<h1 id="javaSpring"><a href="#javaSpring" class="headerlink" title="javaSpring"></a>javaSpring</h1><h2 id="苍穹外卖项目"><a href="#苍穹外卖项目" class="headerlink" title="苍穹外卖项目"></a>苍穹外卖项目</h2><h3 id="软件开发整体介绍"><a href="#软件开发整体介绍" class="headerlink" title="软件开发整体介绍"></a>软件开发整体介绍</h3><h4 id="软件开发流程"><a href="#软件开发流程" class="headerlink" title="软件开发流程"></a>软件开发流程</h4><p>需求规格说明书:</p>
+<p><img src="https://s2.loli.net/2024/03/25/Z83YplPi49kEtoa.png" alt="image-20240325123447048"></p>
+<p>产品原型:通过静态网页的形式展示:</p>
+<p><img src="https://s2.loli.net/2024/03/25/qtAGWZS5r8efRUD.png" alt="image-20240325123515349"></p>
+<p>UI设计:</p>
+<p><img src="https://s2.loli.net/2024/03/25/4Npxjb8J31Uif9k.png" alt="image-20240325124057523"></p>
+<p>数据库设计:</p>
+<p><img src="https://s2.loli.net/2024/03/25/ZTBRiJ4FstA2UQp.png" alt="image-20240325124145350"></p>
+<p>接口设计:</p>
+<p><img src="https://s2.loli.net/2024/03/25/azNJDU59MTGFQZ6.png" alt="image-20240325124200495"></p>
+<p>上述进行完就是这些了:</p>
+<p><img src="https://s2.loli.net/2024/03/25/7mfyPWVTeNx2Apl.png" alt="image-20240325124316779"></p>
+<p><img src="https://s2.loli.net/2024/03/25/y7IkXaJh2PWSNrQ.png" alt="image-20240325124415144"></p>
+<h4 id="角色分工"><a href="#角色分工" class="headerlink" title="角色分工"></a>角色分工</h4><p><img src="https://s2.loli.net/2024/03/25/wVR1yquHQKk834e.png" alt="image-20240325124501062"></p>
+<h4 id="环境分配"><a href="#环境分配" class="headerlink" title="环境分配"></a>环境分配</h4><p><img src="https://s2.loli.net/2024/03/25/7zFAyHnwqWhsMuJ.png" alt="image-20240325125052319"></p>
+<p>开发-&gt;测试-&gt;生产.</p>
+<h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><h4 id="功能架构"><a href="#功能架构" class="headerlink" title="功能架构:"></a>功能架构:</h4><p><img src="https://s2.loli.net/2024/03/25/qWixoKEhHk4DUsz.png" alt="image-20240325125342661"></p>
+<h4 id="产品原型"><a href="#产品原型" class="headerlink" title="产品原型:"></a>产品原型:</h4><p><img src="https://s2.loli.net/2024/03/25/5aUt8RxMjw6XFhL.png" alt="image-20240325125659157"></p>
+<p><img src="https://s2.loli.net/2024/03/25/waiboq1eX9cJ2fC.png" alt="image-20240325125727296"></p>
+<p>展示效果的模型就是产品原型.</p>
+<p><img src="https://s2.loli.net/2024/03/25/kuVn2BWv3JhHXMr.png" alt="image-20240325130043869"></p>
+<p>先学着,耐住寂寞才能变强,不然图书馆为什么那么多人.</p>
+<p>通过产品原型就能理解业务如何实现:</p>
+<p><img src="https://s2.loli.net/2024/03/25/ZFnOrR3Gv9gwodU.png" alt="image-20240325130329943"></p>
+<p><img src="https://s2.loli.net/2024/03/25/vsHV4uJq2elf1o7.png" alt="image-20240325130347033"></p>
+<p>nb的产品原型右边都是有这些说明文字的.</p>
+<p>技术选型:</p>
+<p>WebSocket:实现项目中的催单和来单提醒.</p>
+<p><img src="https://s2.loli.net/2024/03/25/kQq1piJNt8szrDm.png" alt="image-20240325133242923"></p>
+<h3 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h3><p>经典前后端分离:</p>
+<p><img src="https://s2.loli.net/2024/03/25/VhvXQLApHTxBZer.png" alt="image-20240325134043649"></p>
+<p>专业术语:</p>
+<p>data transfer object和value object.</p>
+<p><img src="https://s2.loli.net/2024/03/25/xU7r9H4gkMO32hC.png" alt="image-20240325195449249"></p>
+<p>在软件开发中，<strong>POJO</strong> 是 “Plain Old Java Object” 的缩写，指的是简单的普通Java对象，它不继承特定类或实现特定接口，也不依赖特定框架。POJO 是对 JavaBean 的一种扩展概念，用来表示普通的Java对象，它通常用于承载数据、传输数据或封装业务逻辑。</p>
+<p><strong>示例</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Constructors, getters, setters</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Long <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setId</span><span class="params">(Long id)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getUsername</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUsername</span><span class="params">(String username)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.username = username;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getEmail</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> email;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setEmail</span><span class="params">(String email)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.email = email;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	最喜欢controller的一集</p>
+<p><img src="https://s2.loli.net/2024/03/25/8f6p9WdcGSz1LE4.png" alt="image-20240325204735328"></p>
+<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><h4 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式:"></a>单例设计模式:</h4><p><img src="https://s2.loli.net/2024/03/25/Vb182s3UmBtOjri.png" alt="image-20240325205749805"></p>
+<p>代码示例:</p>
+<p><img src="https://s2.loli.net/2024/03/25/kmyAspPWNhJF3Yx.png" alt="image-20240325210603909"></p>
+<p>类变量是属于类自己持有的:</p>
+<p>定义方法就是:private static A a &#x3D; new A();类变量a只会有一个.</p>
+<p>打印地址,获取到的是同一个对象:<img src="https://s2.loli.net/2024/03/25/fPYO4yg1d6RzB5a.png" alt="image-20240325210755523"></p>
+<p>单例设计模式的好处:</p>
+<p>​	例子:runTime类(<code>代表你程序的运行环境</code>):</p>
+<p><img src="https://s2.loli.net/2024/03/25/y3JLC8uF2DbhkpH.png" alt="image-20240325210934092"></p>
+<p>​	final修饰变量必须赋初始值，并且不能被修改</p>
+<p><img src="https://s2.loli.net/2024/03/25/BZAJfxnEwXli4M8.png" alt="image-20240325211110910"></p>
+<p><img src="https://s2.loli.net/2024/03/25/17rCRH3VIhc95qQ.png" alt="image-20240325211149011"></p>
+<p>扩展:<code>懒汉式的单例对象</code></p>
+<p><img src="https://s2.loli.net/2024/03/25/62RwFut4OQdh1zq.png" alt="image-20240325211248547"></p>
+<h4 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h4><p><img src="https://s2.loli.net/2024/03/25/xyXBZu7K1mhopSF.png" alt="image-20240325211544308"></p>
+<p>匿名的意思就是不用给这个类起名字.可以直接把这个类传入当参数.</p>
+<p><img src="https://s2.loli.net/2024/03/25/k1S56oL9dxw8zg2.png" alt="image-20240325211739239"></p>
+<p>使用java开发桌面程序的时候:<img src="https://s2.loli.net/2024/03/25/VGBkcxt1P7eZIvy.png" alt="image-20240325212124780"></p>
+<p><strong>这里监听事件就需要匿名内部类了.一般都是为了满足别人定义好的API的要求.</strong></p>
+<p><code>最终的核心目的是简化代码. </code></p>
+<p>和js的箭头函数差不多:<img src="https://s2.loli.net/2024/03/25/Lh7r6cPMFnwqjWQ.png" alt="image-20240325212722802"></p>
+<p>相信我:看视频就是最快的,倍速!</p>
+<h4 id="反射"><a href="#反射" class="headerlink" title="反射:"></a>反射:</h4><p>反射是:加载类,然后允许以编程的方式解刨类中的各种成分(成员变量,方法,构造器等等).</p>
+<p>比如IDEA会自动提示对象的方法和属性,这就是反射的应用:</p>
+<p><img src="https://s2.loli.net/2024/03/25/kzQGn1qwoysEFil.png" alt="image-20240325213301130"></p>
+<p><img src="https://s2.loli.net/2024/03/25/WY5hprnbyi9PDmf.png" alt="image-20240325213402175"></p>
+<p>代码示例:</p>
+<p><img src="C:/Users/13205/AppData/Roaming/Typora/typora-user-images/image-20240325213623682.png" alt="image-20240325213623682"></p>
+<p>反射的作用:</p>
+<p><img src="https://s2.loli.net/2024/03/26/ZoagFd4EimuU5JK.png" alt="image-20240326095458759"></p>
+<p><strong>框架就是一大堆Java代码</strong>:</p>
+<p><img src="https://s2.loli.net/2024/03/26/YhDmlO8XfkatS96.png" alt="image-20240326095649352"></p>
+<p>具体实现:”</p>
+<p><img src="https://s2.loli.net/2024/03/26/aHI5bKdhTE6XvjG.png" alt="image-20240326100030579"></p>
+<h4 id="注解"><a href="#注解" class="headerlink" title="注解:"></a>注解:</h4><p>注解的本质就是接口,里面没有属性,只有抽象方法.</p>
+<p>注解可以实现标注,也就是提供信息罢了.</p>
+<p>主要目的还是<code>实现框架,告诉编译器:IDEA和框架代码,这个函数是干啥的,然后框架识别到这些,直接采取对应的措施,都是人家定义好的,直接用就行了.</code></p>
+<p>使用注解实现带有注解:<strong>MyTest的方法才能启动</strong></p>
+<p><img src="https://s2.loli.net/2024/03/26/F1bvxlOHWsAQatD.png" alt="image-20240326201052643"></p>
+<h4 id="DTO-VO-Entity"><a href="#DTO-VO-Entity" class="headerlink" title="DTO,VO,Entity:"></a>DTO,VO,Entity:</h4><p>在Java中，DTO（Data Transfer Object）、VO（Value Object）和Entity（实体类）是常见的概念，用于在不同层之间传递数据或表示某个领域的实体对象。下面是一个简单的示例来说明它们之间的区别和用法：</p>
+<h5 id="Entity（实体类）："><a href="#Entity（实体类）：" class="headerlink" title="Entity（实体类）："></a>Entity（实体类）：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table(name = &quot;products&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Product</span> &#123;</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，<code>Product</code> 是一个实体类，用于表示数据库中产品表的结构。通常，实体类与数据库表字段直接映射。</p>
+<h5 id="DTO（Data-Transfer-Object）："><a href="#DTO（Data-Transfer-Object）：" class="headerlink" title="DTO（Data Transfer Object）："></a>DTO（Data Transfer Object）：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProductDTO</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>DTO通常用于在不同层之间传递数据，在前后端交互或服务之间数据传输中发挥作用。在这个示例中，<code>ProductDTO</code> 是一个用于表示产品数据的传输对象，通常用于在服务层和控制器层之间传递数据。</p>
+<h5 id="VO（Value-Object）："><a href="#VO（Value-Object）：" class="headerlink" title="VO（Value Object）："></a>VO（Value Object）：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProductVO</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Getters and setters</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>VO一般用于表示视图层的对象，将后端数据展示给前端。在这个示例中，<code>ProductVO</code> 是一个用于表示产品信息展示的值对象，通常在前端页面展示产品信息时使用。</p>
+<p>总结：</p>
+<ul>
+<li>Entity 表示数据库中的实体，与数据库表字段直接映射。</li>
+<li>DTO 负责不同层之间的数据传输，可以包含部分或全部实体类的信息。</li>
+<li>VO 主要用于表示视图层需要的数据对象，包含展示所需的数据。</li>
+</ul>
+<h3 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h3><p>修改数据库的地址和用户名和密码:</p>
+<p>在application_dev.xml中修改即可.</p>
+<p>全局异常处理类:</p>
+<p><img src="https://s2.loli.net/2024/03/25/Pcq8gtjVweIDEu5.png" alt="image-20240325222110444"></p>
+<p>通过代码跟踪的方式,确实能认识到许多java的程序执行和全局常量类和全局工具类的使用.</p>
+<p>Result类:</p>
+<p><img src="https://s2.loli.net/2024/03/25/NzTSWwkUhiR5Gbc.png" alt="image-20240325223400281"></p>
+<p>IDEA调试还是太方便了,傻逼VSCODE</p>
+<p><img src="https://s2.loli.net/2024/03/25/mvtzknSygpe9N8W.png" alt="image-20240325223429273"></p>
+<p>这些常用的属性统一封装成spingBoot中的配置属性类:</p>
+<p><img src="https://s2.loli.net/2024/03/25/H9lXyLd8GRheEPu.png" alt="image-20240325223554982"></p>
+<p>具体就是加了一个注解:<img src="https://s2.loli.net/2024/03/25/eaznqf6WBLxCuXR.png" alt="image-20240325223620356"></p>
+<p>加入这个<code>@ConfigurationProperties(prefix = &quot;sky.jwt&quot;)</code></p>
+<p>就可以从sky.jwt这个文件导入属性了.</p>
+<p>可以通过<strong>断点调试</strong>跟踪<strong>后端程序的执行过程</strong>.</p>
+<p>可以直接查看内存中变量的值,jetbrain家的调试还是太方便了.</p>
+<h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><p><img src="https://s2.loli.net/2024/03/26/ws5eMUt2cK98ZRv.png" alt="image-20240326204901070"></p>
+<p>答案:NGinx反向代理.</p>
+<p><img src="https://s2.loli.net/2024/03/26/4Uj5QJatNryLYTm.png" alt="image-20240326210702868"></p>
+<p>1.能够在集群方式运行的后端中,对服务器的状态进行监控,然后决定把请求转发给谁.</p>
+<p>2.保证服务安全:一般来说后端的服务都是部署在公司内网的,内网不能由前端直接访问,而是通过nginx来配置让前端访问nginx这个服务器,相当于nginx中间层进行管理.</p>
+<p>nginx教学:<img src="https://s2.loli.net/2024/03/26/vzNE5rcZBI9gyom.png" alt="image-20240326211147020"></p>
+<p>会<strong>自动对替换的静态路径后面添加上动态路径</strong>,上面红色的<code>/api/</code>就是被替换的,看图就行</p>
+<p>反正都是转发请求(负载均衡和反向代理).</p>
+<p><img src="https://s2.loli.net/2024/03/26/zIFeX8KVnkOYwlj.png" alt="image-20240326212235582"></p>
+<p>upstream代表命名一个服务器组.</p>
+<p><img src="https://s2.loli.net/2024/03/26/4ydJEYM1z7m9SZN.png" alt="image-20240326213005946"></p>
+<p>类似于这个:</p>
+<p><img src="https://s2.loli.net/2024/03/26/Mqo2cIJLle5SWws.png" alt="image-20240326213932204"></p>
+<h4 id="Nginx配置-简单"><a href="#Nginx配置-简单" class="headerlink" title="Nginx配置(简单)"></a>Nginx配置(简单)</h4><p>答案:就是按照人家这个配置就行,照抄,别想太多:</p>
+<p><img src="https://s2.loli.net/2024/04/07/6LqBSgp4iAz8bIP.png" alt="image-20240407205857620"></p>
+<p>前后的斜杠都要加…</p>
+<p>最终代码:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span> mime.types; <span class="comment"># 包含mime.types文件，用于定义文件类型</span></span><br><span class="line">    <span class="attribute">default_type</span> application/octet-stream; <span class="comment"># 默认文件类型</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;  # 定义日志格式</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;  # 访问日志路径和格式</span></span><br><span class="line">    <span class="attribute">sendfile</span> <span class="literal">on</span>; <span class="comment"># 开启文件发送</span></span><br><span class="line">    <span class="comment">#tcp_nopush     on;  # 开启TCP_NOPUSH</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;  # 保持连接超时时间为0</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span> <span class="number">65</span>; <span class="comment"># 保持连接超时时间为65秒</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;  # 开启gzip压缩</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">map</span> <span class="variable">$http_upgrade</span> <span class="variable">$connection_upgrade</span> &#123;</span><br><span class="line">        <span class="attribute">default</span> upgrade; <span class="comment"># 默认值为upgrade</span></span><br><span class="line">        &#x27;&#x27; close; <span class="comment"># 如果$http_upgrade为空，则值为close</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="section">upstream</span> webservers &#123;</span><br><span class="line">        <span class="attribute">server</span> <span class="number">127.0.0.1:8080</span> weight=<span class="number">90</span> ; <span class="comment"># 定义服务器地址和权重</span></span><br><span class="line">        <span class="comment">#server 127.0.0.1:8088 weight=10 ;  # 定义服务器地址和权重</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">80</span>; <span class="comment"># 监听端口80</span></span><br><span class="line">        <span class="attribute">server_name</span> localhost; <span class="comment"># 服务器名称为localhost</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset koi8-r;  # 字符编码为koi8-r</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;  # 访问日志路径和格式</span></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span> html/sky; <span class="comment"># 根目录为html/sky</span></span><br><span class="line">            <span class="attribute">index</span> index.html index.htm; <span class="comment"># 默认首页文件</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404              /404.html;  # 错误页面重定向</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span> <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /50x.html; <span class="comment"># 错误页面重定向</span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span> html; <span class="comment"># 根目录为html</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 反向代理,处理管理端发送的请求</span></span><br><span class="line">        <span class="section">location</span> /api/ &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://localhost:8080/admin/;</span><br><span class="line">            <span class="comment">#proxy_pass   http://webservers/admin/;</span></span><br><span class="line">            <span class="comment"># 反向代理到http://webservers/admin/</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 反向代理,处理用户端发送的请求</span></span><br><span class="line">        <span class="section">location</span> /user/ &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://webservers/user/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># WebSocket</span></span><br><span class="line">        <span class="section">location</span> /ws/ &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://webservers/ws/;</span><br><span class="line">            <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>; <span class="comment"># 使用HTTP/1.1协议</span></span><br><span class="line">            <span class="attribute">proxy_read_timeout</span> <span class="number">3600s</span>; <span class="comment"># 代理读取超时时间为3600秒</span></span><br><span class="line">            <span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>; <span class="comment"># 设置Upgrade请求头</span></span><br><span class="line">            <span class="attribute">proxy_set_header</span> Connection <span class="string">&quot;<span class="variable">$connection_upgrade</span>&quot;</span>; <span class="comment"># 设置Connection请求头</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location ~ \.php$ &#123;</span></span><br><span class="line">        <span class="comment">#    root           html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass   127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include        fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># deny access to .htaccess files, if Apache&#x27;s document root</span></span><br><span class="line">        <span class="comment"># concurs with nginx&#x27;s one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location ~ /\.ht &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># another virtual host using mix of IP-, name-, and port-based configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server &#123;</span></span><br><span class="line">    <span class="comment">#    listen       8000;</span></span><br><span class="line">    <span class="comment">#    listen       somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name  somename  alias  another.alias;</span></span><br><span class="line">    <span class="comment">#    location / &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">    <span class="comment"># HTTPS server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server &#123;</span></span><br><span class="line">    <span class="comment">#    listen       443 ssl;</span></span><br><span class="line">    <span class="comment">#    server_name  localhost;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line">    <span class="comment">#    location / &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前后的斜杠不能忘啊</p>
+<p><code>location /api/</code></p>
+<p><code>proxy_pass http://localhost:8080/admin/;</code></p>
+<p>不能写成这个:</p>
+<p><code>location /api</code></p>
+<p><code>proxy_pass http://localhost:8080/admin</code></p>
+<p>上面这个是错的,具体原因:</p>
+<p><img src="https://s2.loli.net/2024/04/07/NqoHjXTfDYUAEe3.png" alt="image-20240407210048160"></p>
+<h4 id="完善登录功能"><a href="#完善登录功能" class="headerlink" title="完善登录功能"></a>完善登录功能</h4><p>hash密码存储到数据库.(MD5加密)</p>
+<p><img src="https://s2.loli.net/2024/03/26/NQKUcsq2RbwY1xX.png" alt="image-20240326220037226"></p>
+<h4 id="导入接口文档"><a href="#导入接口文档" class="headerlink" title="导入接口文档:"></a>导入接口文档:</h4><p>前后端分离的开发流程:</p>
+<p><img src="https://s2.loli.net/2024/03/26/Exkn3Do62YGyWJA.png" alt="image-20240326222212529"></p>
+<p>直接使用APIFOX导入Yapi的json格式的接口即可.</p>
+<h4 id="使用Swagger"><a href="#使用Swagger" class="headerlink" title="使用Swagger:"></a>使用Swagger:</h4><p>自动生成接口文档和进行接口测试.</p>
+<p><img src="https://s2.loli.net/2024/03/26/NHfMwiKO3Wjmez6.png" alt="image-20240326223212193"></p>
+<p><strong>最重要的代码</strong></p>
+<p><img src="https://s2.loli.net/2024/03/26/jM2HBFbpNUgKCI5.png" alt="image-20240326223414397"></p>
+<p>设置静态资源映射:</p>
+<p><img src="https://s2.loli.net/2024/03/26/keAolqyGNZJ4tni.png" alt="image-20240326223314547"></p>
+<p>不设置静态资源映射就找不到网页.</p>
+<p>yapi:<code>apifox</code>是接口设计阶段使用的</p>
+<p>swagger是后端接口测试使用的,两者并不冲突.</p>
+<p><img src="https://s2.loli.net/2024/03/27/PzacVD8kujBHnwS.png" alt="image-20240327122208454"></p>
+<h3 id="员工管理-商家管理"><a href="#员工管理-商家管理" class="headerlink" title="员工管理,商家管理"></a>员工管理,商家管理</h3><p>先开发:分类管理.</p>
+<p>英语还是没有那么热衷,语言就是多听,多说,多看就行了.</p>
+<p>代码也是语言!!.</p>
+<h4 id="1-员工端"><a href="#1-员工端" class="headerlink" title="1.员工端"></a>1.员工端<img src="https://s2.loli.net/2024/03/27/6yNM8SseVFfc2nh.png" alt="image-20240327131809202"></h4><p>单表的增删改查.</p>
+<p><img src="https://s2.loli.net/2024/03/27/lGQLhdUjIvexXWA.png" alt="image-20240327131904462"></p>
+<p>基本都是上面的流程.</p>
+<p>通过对产品原型的分析,确定代码如何写:</p>
+<p><img src="https://s2.loli.net/2024/03/27/IVnrmSpHXlxW3sk.png" alt="image-20240327132558039"></p>
+<p><img src="https://s2.loli.net/2024/03/27/F71isHpNJbw5jTU.png" alt="image-20240327132323866"></p>
+<p>使用前缀来对用户端和管理端的请求进行分离.</p>
+<p><img src="https://s2.loli.net/2024/03/27/3iZ6vLnGBTNtcmq.png" alt="image-20240327132636273"></p>
+<p><strong>终于到代码了!</strong></p>
+<h5 id="新增员工"><a href="#新增员工" class="headerlink" title="新增员工"></a>新增员工</h5><p><img src="https://s2.loli.net/2024/03/27/ivgBHx8PJ3YMq5o.png" alt="image-20240327135823086"></p>
+<p>还得是ai,提供的效率真的nb</p>
+<p>1.controller先调用服务的方法:</p>
+<p><img src="https://s2.loli.net/2024/03/27/cy3bWXfA4T2eJEd.png" alt="image-20240327145310042"></p>
+<p>然后在service中写实际的保存逻辑.</p>
+<p><img src="https://s2.loli.net/2024/03/27/yurKFovaweIpkgT.png" alt="image-20240327145352288"></p>
+<p>最后在mapper中实现具体的逻辑:</p>
+<p><img src="https://s2.loli.net/2024/03/27/knMVSPp1cJe2sb5.png" alt="image-20240327145521213"></p>
+<p>Java中的token校验:</p>
+<p><img src="https://s2.loli.net/2024/03/27/v5UxoRV6srG7mX2.png" alt="image-20240327200153409"></p>
+<p>按照这里的配置项进行的令牌获取:</p>
+<p><img src="https://s2.loli.net/2024/03/27/ZPe6AkgEuycxfrR.png" alt="image-20240327201137461"></p>
+<p>所以请求头:里面也要附带上这个参数:</p>
+<p><img src="https://s2.loli.net/2024/03/27/mc3YdB1lReGnv7N.png" alt="image-20240327201216969"></p>
+<p>代码存在的问题:</p>
+<p><img src="https://s2.loli.net/2024/03/27/KH1m3sqyubDeAIE.png" alt="image-20240327203033092"></p>
+<p>就是ID和数据库在用户名重名的时候抛出了异常.这都是我自己要学习的,但是首先保证学校课程的学习吧.</p>
+<p>首先保证学分绩.</p>
+<p>异常处理:</p>
+<p>通过spilt函数,将空格放进去,然后根据空格把字符串搞成字符串数组.</p>
+<p>此时的用户名就是第三个,下标去取就是split[2],然后直接拼接字符串即可.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ar = <span class="string">&quot;i love you&quot;</span></span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line">ar.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">(<span class="number">3</span>) [<span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;love&#x27;</span>, <span class="string">&#x27;you&#x27;</span>]<span class="comment">//java和js其实差不多.</span></span><br></pre></td></tr></table></figure>
+
+<p>在全局的异常处理类中,直接重载异常处理器:</p>
+<p><img src="https://s2.loli.net/2024/03/27/SqBfO8Zb6mCHLcw.png" alt="image-20240327211309247"></p>
+<p>以后写笔记,只看代码开发视频.</p>
+<p>动态获取当前登录员工的id:</p>
+<p><img src="https://s2.loli.net/2024/03/27/8J4tkqY1Ul2rWwf.png" alt="image-20240327211506131"></p>
+<p><img src="https://s2.loli.net/2024/03/27/lcWEOki2M9sCGHz.png" alt="image-20240327212035245"></p>
+<p>因为创建的时候使用的:</p>
+<p><img src="https://s2.loli.net/2024/03/27/7cCvOymgjaQLGxZ.png" alt="image-20240327212050930"></p>
+<p>这里这个常量的值为:<img src="https://s2.loli.net/2024/03/27/tHehOwYSmJDlMTc.png" alt="image-20240327212113491"></p>
+<p>其实这个map就是<code>&#123;empId:实际用户的id&#125;</code></p>
+<p>然后到时候直接解码出来这个claims键值对即可.</p>
+<p><img src="https://s2.loli.net/2024/03/27/PZ8c9yhAKLwkEWj.png" alt="image-20240327212414455"></p>
+<p>引出<code>threadLocal</code></p>
+<p>在java的Spring框架中,客户端发起的每一次请求,都对应单独一个线程.</p>
+<p>这里是分别在jwt拦截器,service,contraller分别进行了id的打印.</p>
+<p><img src="https://s2.loli.net/2024/03/27/JrH3agXlUQ1Nh2p.png" alt="image-20240327212902630"></p>
+<p>使用ThreadLocal即可共享同一份线程的数据.</p>
+<p>使用封装好的工具类:</p>
+<p><img src="https://s2.loli.net/2024/03/27/7URAvCTtzxjoIqc.png" alt="image-20240327213243347"></p>
+<h5 id="员工分页查询"><a href="#员工分页查询" class="headerlink" title="员工分页查询"></a>员工分页查询</h5><p><img src="https://s2.loli.net/2024/03/28/cLpeG1vMFTUwth3.png" alt="image-20240328192128553"></p>
+<p>总共85个项目:</p>
+<p>Query参数,通过浏览器的地址栏:<code>?方式</code>传递数据.</p>
+<p>接口设计:<img src="https://s2.loli.net/2024/03/28/TVUAuo3PfGXQLDc.png" alt="image-20240328192112205"></p>
+<p>代码:</p>
+<p>根据请求参数设计DTO(数据传输对象,传递前端发过来的数据.) </p>
+<p><img src="https://s2.loli.net/2024/03/28/XLy3IPeHEpo4hbv.png" alt="image-20240328192338435"></p>
+<p><img src="https://s2.loli.net/2024/03/28/MC31pOdtqbYeVyD.png" alt="image-20240328192550093"></p>
+<p>如果是query类型的参数,直接通过:</p>
+<p><img src="https://s2.loli.net/2024/03/28/TZK5cLyHzFQxnBA.png" alt="image-20240328192808807"></p>
+<p>声明就可以得到query了.不用<code>@RequestBody</code></p>
+<p>插件自动化进行sql语句的拼接:<img src="https://s2.loli.net/2024/03/28/E7HYnMl9bzOrokK.png" alt="image-20240328194853244"></p>
+<p>相当于动态参数Limit:getPage和getPageSize.</p>
+<p><img src="https://s2.loli.net/2024/03/28/c2RGNtOkzTv54fM.png" alt="image-20240328195046539"></p>
+<p>最终完成版本:</p>
+<p><img src="https://s2.loli.net/2024/03/28/AmzgQY169kopWnX.png" alt="image-20240328203253769"></p>
+<p>其实还是插件的作用,这里的mapper是这样写的,还得学习mybatis.</p>
+<p><img src="https://s2.loli.net/2024/03/28/HzTYqSMaVy4l7Lg.png" alt="image-20240328203343544"></p>
+<p>这段代码是一个 MyBatis 的 SQL 查询语句，用于在数据库表 <code>sky_take_out.employee</code> 中根据条件查询员工信息，并按照创建时间倒序排列。</p>
+<ul>
+<li><code>&lt;select&gt;</code> 标签定义了一个查询语句，该语句对应的结果类型为 <code>com.sky.entity.Employee</code>。</li>
+<li><code>select * from sky_take_out.employee</code>：这部分是 SQL 查询语句的主体，用于选择所有员工信息。</li>
+<li><code>&lt;where&gt;</code> 标签标识了条件语句的开始。</li>
+<li><code>&lt;if&gt;</code> 标签用于根据条件判断是否添加特定的查询条件。在这里，如果传入的 <code>name</code> 参数不为 <code>null</code> 且不为空字符串，则添加一个按照名字模糊查询的条件。<ul>
+<li><code>and name like concat(&#39;%&#39;,#&#123;name&#125;,&#39;%&#39;)</code>：这部分是条件语句，表示如果 <code>name</code> 参数不为空，则添加一个条件，通过 <code>like</code> 进行模糊匹配查询，查询名字中包含传入参数 <code>name</code> 的员工信息。</li>
+</ul>
+</li>
+<li><code>&lt;/where&gt;</code> 标签标识了条件语句的结束。</li>
+<li><code>order by create_time desc</code>：这部分表示根据 <code>create_time</code> 字段进行倒序排列，即最新创建的记录排在前面。</li>
+</ul>
+<p>看下插件的源码:</p>
+<p><img src="https://s2.loli.net/2024/03/28/X95gsjrRIKq7Vkn.png" alt="image-20240328203612435"></p>
+<p>这里设置这个pageHelper主要是查询分页,总体的数据量和分页查询几条数据</p>
+<p><img src="https://s2.loli.net/2024/03/28/lNVaXW1ibqdvsG3.png" alt="image-20240328203716675"></p>
+<p>然后在这个ThreadLocal中存入了配置的设置.</p>
+<h6 id="日期问题"><a href="#日期问题" class="headerlink" title="日期问题:"></a>日期问题:</h6><p>​	因为日期返回给前端存在问题,所以出现了日期是这样的:<img src="https://s2.loli.net/2024/03/28/WL91hJACMUD8lpv.png" alt="image-20240328214645719"></p>
+<p>返回给前端的日期数据是数组.</p>
+<p><img src="https://s2.loli.net/2024/03/28/xvfLlFunh1JHbBj.png" alt="image-20240328214806930"></p>
+<p>具体就是直接加入扩展的格式化处理即可.</p>
+<p>如何给全局加入这个消息转换器?</p>
+<p><code>直接继承这个配置父类即可</code><img src="https://s2.loli.net/2024/03/28/chbuVryD3fHkeoL.png" alt="image-20240328215032515"></p>
+<p><img src="https://s2.loli.net/2024/03/28/ygmTvkcbrsAnHWU.png" alt="image-20240328215712011"></p>
+<p>这里面的JacksonObjectMapper就是对象转换器,看下代码:</p>
+<p><img src="https://s2.loli.net/2024/03/28/xPFAsXQ8DeufZ1c.png" alt="image-20240328220005393"></p>
+<p>主要是注册一个partten,然后进行时间的转换.</p>
+<p>调试代码就能看见确实加入了:<img src="https://s2.loli.net/2024/03/28/DlhKnmR94LU6wdE.png" alt="image-20240328220110446"></p>
+<p>加入之后,根据那个日期格式化的模式,就可以使用Spring mvc的自动转换进行日期格式化了.</p>
+<h5 id="员工禁用和启用"><a href="#员工禁用和启用" class="headerlink" title="员工禁用和启用:"></a>员工禁用和启用:</h5><p><img src="https://s2.loli.net/2024/03/29/71xoOWgCABUkKDu.png" alt="image-20240329150050936"></p>
+<p>基本查询的时候才需要泛型,前端传过来的参数,如果是query,直接使用函数参数接收即可,如果是路径参数,使用注解接收..</p>
+<p><img src="https://s2.loli.net/2024/03/29/KQwAYy2lu9zUshE.png" alt="image-20240329150755638"></p>
+<p>这种中括号的东西就是路径参数..</p>
+<p>一般是这样的逻辑:controller调用service接口,然后再实现这个接口的方法.</p>
+<p>最终在Mapper里面去实现对数据库的操作.</p>
+<p><img src="https://s2.loli.net/2024/03/29/tUT48iJ7uAVP95I.png" alt="image-20240329151452542"></p>
+<p>在Mapper中调用动态SQL:</p>
+<p><img src="https://s2.loli.net/2024/03/29/A7pUiqjOQwNH13S.png" alt="image-20240329152019617"></p>
+<p>弹幕还是有点用的,没有安装扩展MybatisX就会看不到.</p>
+<h3 id="分类管理模块"><a href="#分类管理模块" class="headerlink" title="分类管理模块"></a>分类管理模块</h3><p>具体为:删除时:需要判断是否删除菜品分类下的所有菜品.</p>
+<p>简单的判断,还是访问数据库:</p>
+<p><img src="https://s2.loli.net/2024/04/08/EBAr15CzpWynL8m.png" alt="image-20240408123730456"></p>
+<p>​	公共的字段,重复创建了.</p>
+<p>当数据表发生了变化,这些东西都要跟着去改.</p>
+<p><img src="C:/Users/13205/AppData/Roaming/Typora/typora-user-images/image-20240408123921187.png" alt="image-20240408123921187"></p>
+<p>定义注解,然后注册一个拦截器,使用拦截器把对这些公共字段赋值操作给统一起来.</p>
+<p><img src="https://s2.loli.net/2024/04/08/9xdjOF8u6la3WvB.png" alt="image-20240408130753612"></p>
+<p><strong>切入点</strong>:<code>说白了就是对哪些类的哪些方法进行拦截.</code></p>
+<p>这里拦截规则问chatGPT即可.</p>
+<p>前面表达式是锁定了map包下的所有类,然后后面的是锁定有AutoFIll这个注解. </p>
+<p><strong>通知</strong>:<code>对代码进行增强的部分.</code></p>
+<p><strong>链接点</strong>:<code>通过这个链接点可以获取别的程序得到的参数,然后直接就可以使用这个参数结果</code></p>
+<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><p><img src="https://s2.loli.net/2024/04/09/qt5igG6heQ89FxJ.png" alt="image-20240409094223298"></p>
+<p>使用阿里云的文件上传服务,然后直接使用这个注解,就会到这里自动查找</p>
+<p><img src="https://s2.loli.net/2024/04/09/P3kuvVGfhjbLqDX.png" alt="image-20240409094329080"></p>
+<p>这就是注解的作用</p>
+<p>这里的配置还是使用引用的方式:<img src="https://s2.loli.net/2024/04/09/HEQaXNyZFoswTLY.png" alt="image-20240409094755581"></p>
+<p>然后具体的配置项就是在配置的注解那里.</p>
+<p><img src="https://s2.loli.net/2024/04/09/ntOvum7BsLMTFez.png" alt="image-20240409094823696"></p>
+<h3 id="苍穹外卖中注解的作用"><a href="#苍穹外卖中注解的作用" class="headerlink" title="苍穹外卖中注解的作用:"></a>苍穹外卖中注解的作用:</h3><p>这四个注解在Java中通常用于不同的用途：</p>
+<ol>
+<li><code>@Data</code>: <code>@Data</code>注解是Lombok库提供的一个注解，它会自动为类生成一些通用的方法，例如<code>toString()</code>、<code>equals()</code>、<code>hashCode()</code>和<code>getter</code>、<code>setter</code>方法。通过在类上添加<code>@Data</code>注解，可以减少代码量，提高代码的可读性和简洁性。</li>
+<li><code>@Builder</code>: <code>@Builder</code>注解同样来自于Lombok库，它可以帮助我们创建Builder模式的构造器。Builder模式可以让我们以一种更加流畅和易读的方式构建对象，尤其在对象拥有多个属性且部分属性是可选的情况下，使用Builder模式可以提高代码的可读性和灵活性。</li>
+<li><code>@NoArgsConstructor</code>: <code>@NoArgsConstructor</code>注解同样是Lombok库提供的，它会为类生成一个无参的构造方法。在某些情况下，比如使用反射创建对象或者通过无参构造方法初始化对象时，会需要这样一个无参构造方法。</li>
+<li><code>@AllArgsConstructor</code>: <code>@AllArgsConstructor</code>注解也来自于Lombok库，它会为类生成一个包含所有字段的构造方法。这个构造方法可以用于快速地创建对象，并且可以方便地在测试中初始化对象。</li>
+</ol>
+<p>Spring注解:</p>
+<p>这段代码是一个Spring Boot中的控制器类（Controller），主要用于处理与员工（Employee）相关的HTTP请求。下面解释每个注解的作用： </p>
+<ol>
+<li><code>@RestController</code>：这个注解是Spring框架提供的，它将该类标记为一个RESTful风格的控制器，意味着该控制器中的方法会以JSON格式返回数据，而不是视图。相比于<code>@Controller</code>注解，<code>@RestController</code>注解省略了在每个方法上添加<code>@ResponseBody</code>的步骤，因此更为简洁方便。</li>
+<li><code>@RequestMapping(&quot;/admin/employee&quot;)</code>：这个注解指定了处理HTTP请求的URL路径。在这个示例中，所有处理员工相关请求的方法的URL都以”&#x2F;admin&#x2F;employee”开头。通过这种方式，可以将相同类型的请求映射到同一个控制器中进行处理。</li>
+<li><code>@Slf4j</code>：这是Lombok库提供的一个注解，用于自动生成日志对象。使用<code>@Slf4j</code>注解后，可以直接使用<code>log</code>对象进行日志记录，无需手动创建。</li>
+<li><code>@Autowired</code>：这个注解是Spring框架提供的，用于自动装配（注入）依赖。在这个示例中，通过<code>@Autowired</code>注解，Spring会自动将<code>EmployeeService</code>和<code>JwtProperties</code>的实例注入到<code>EmployeeController</code>中，无需手动创建实例。</li>
+<li><code>@PostMapping(&quot;/login&quot;)</code>和<code>@PostMapping(&quot;/logout&quot;)</code>：这是处理POST请求的方法。<code>@PostMapping</code>注解指定了处理POST请求的URL路径。在这个示例中，<code>login()</code>方法处理”&#x2F;admin&#x2F;employee&#x2F;login”路径的POST请求，而<code>logout()</code>方法处理”&#x2F;admin&#x2F;employee&#x2F;logout”路径的POST请求。</li>
+<li><code>@RequestBody</code>：这个注解用于将HTTP请求的body部分转换为Java对象。在<code>login()</code>方法中，<code>@RequestBody</code>注解将HTTP请求中的JSON数据转换为<code>EmployeeLoginDTO</code>对象。</li>
+<li><code>@ResponseBody</code>：虽然代码中没有显式使用<code>@ResponseBody</code>注解，但是由于<code>@RestController</code>注解的存在，所有返回的对象都会被自动转换为JSON格式并返回给客户端。</li>
+</ol>
+<h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h1 id="部署服创后端项目"><a href="#部署服创后端项目" class="headerlink" title="部署服创后端项目"></a>部署服创后端项目</h1><h2 id="1-安装nodejs"><a href="#1-安装nodejs" class="headerlink" title="1.安装nodejs"></a>1.安装nodejs</h2><p><a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">nodesource&#x2F;distributions: NodeSource Node.js Binary Distributions (github.com)</a></p>
+<h2 id="2-安装mongodb"><a href="#2-安装mongodb" class="headerlink" title="2.安装mongodb"></a>2.安装mongodb</h2><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu">Install MongoDB Community Edition on Ubuntu — MongoDB Manual</a></p>
+<p>因为要使用副本集模式来使用prisma,则使用下面的教程即可</p>
+<p>最好的安装教程就是官方文档</p>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/docs/manual/tutorial/convert-standalone-to-replica-set/">Convert a Standalone mongod to a Replica Set — MongoDB Manual</a></p>
+<h2 id="3-安装redis"><a href="#3-安装redis" class="headerlink" title="3.安装redis"></a>3.安装redis</h2><p>要在 Linux 上安装 Redis，你可以按照以下步骤操作：</p>
+<h3 id="方法一：使用包管理器安装（适用于基于-apt-的系统，如-Ubuntu）"><a href="#方法一：使用包管理器安装（适用于基于-apt-的系统，如-Ubuntu）" class="headerlink" title="方法一：使用包管理器安装（适用于基于 apt 的系统，如 Ubuntu）"></a>方法一：使用包管理器安装（适用于基于 apt 的系统，如 Ubuntu）</h3><ol>
+<li><p><strong>更新包管理器缓存</strong>：<br>运行以下命令来确保你的包管理器的缓存已经更新：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装 Redis</strong>：<br>运行以下命令来安装 Redis：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install redis-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>启动 Redis</strong>：<br>在安装完成后，Redis 将会自动启动。你可以通过以下命令来检查 Redis 的状态：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status redis</span><br></pre></td></tr></table></figure>
+<p>如果它没有自动启动，你可以使用以下命令手动启动 Redis：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start redis</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">redis-cli ping</span><br></pre></td></tr></table></figure>
+<p>如果服务器正在运行，它将返回 <code>PONG</code>。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">LHG</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/post/0.html">http://example.com/post/0.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/post/4a17b156.html" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LHG</div><div class="author-info__description">David Le的学习笔记:教我分身术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E4%B8%BA%E4%BA%86%E5%AE%9E%E6%88%98"><span class="toc-number">1.</span> <span class="toc-text">一切都是为了实战</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javaSpring"><span class="toc-number">2.</span> <span class="toc-text">javaSpring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.1.</span> <span class="toc-text">苍穹外卖项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%95%B4%E4%BD%93%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.1.</span> <span class="toc-text">软件开发整体介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">软件开发流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E5%88%86%E5%B7%A5"><span class="toc-number">2.1.1.2.</span> <span class="toc-text">角色分工</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%88%86%E9%85%8D"><span class="toc-number">2.1.1.3.</span> <span class="toc-text">环境分配</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.2.</span> <span class="toc-text">项目介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%9E%B6%E6%9E%84"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">功能架构:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E5%8E%9F%E5%9E%8B"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">产品原型:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">2.1.3.</span> <span class="toc-text">开发环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80"><span class="toc-number">2.1.4.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.1.4.1.</span> <span class="toc-text">单例设计模式:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">2.1.4.2.</span> <span class="toc-text">匿名内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84"><span class="toc-number">2.1.4.3.</span> <span class="toc-text">反射:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.1.4.4.</span> <span class="toc-text">注解:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DTO-VO-Entity"><span class="toc-number">2.1.4.5.</span> <span class="toc-text">DTO,VO,Entity:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Entity%EF%BC%88%E5%AE%9E%E4%BD%93%E7%B1%BB%EF%BC%89%EF%BC%9A"><span class="toc-number">2.1.4.5.1.</span> <span class="toc-text">Entity（实体类）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DTO%EF%BC%88Data-Transfer-Object%EF%BC%89%EF%BC%9A"><span class="toc-number">2.1.4.5.2.</span> <span class="toc-text">DTO（Data Transfer Object）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#VO%EF%BC%88Value-Object%EF%BC%89%EF%BC%9A"><span class="toc-number">2.1.4.5.3.</span> <span class="toc-text">VO（Value Object）：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91"><span class="toc-number">2.1.5.</span> <span class="toc-text">后端开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx"><span class="toc-number">2.1.5.1.</span> <span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx%E9%85%8D%E7%BD%AE-%E7%AE%80%E5%8D%95"><span class="toc-number">2.1.5.2.</span> <span class="toc-text">Nginx配置(简单)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8C%E5%96%84%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD"><span class="toc-number">2.1.5.3.</span> <span class="toc-text">完善登录功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-number">2.1.5.4.</span> <span class="toc-text">导入接口文档:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Swagger"><span class="toc-number">2.1.5.5.</span> <span class="toc-text">使用Swagger:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86-%E5%95%86%E5%AE%B6%E7%AE%A1%E7%90%86"><span class="toc-number">2.1.6.</span> <span class="toc-text">员工管理,商家管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%91%98%E5%B7%A5%E7%AB%AF"><span class="toc-number">2.1.6.1.</span> <span class="toc-text">1.员工端</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E5%91%98%E5%B7%A5"><span class="toc-number">2.1.6.1.1.</span> <span class="toc-text">新增员工</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%98%E5%B7%A5%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">2.1.6.1.2.</span> <span class="toc-text">员工分页查询</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.6.1.2.1.</span> <span class="toc-text">日期问题:</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%98%E5%B7%A5%E7%A6%81%E7%94%A8%E5%92%8C%E5%90%AF%E7%94%A8"><span class="toc-number">2.1.6.1.3.</span> <span class="toc-text">员工禁用和启用:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-number">2.1.7.</span> <span class="toc-text">分类管理模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">2.1.8.</span> <span class="toc-text">文件上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8B%8D%E7%A9%B9%E5%A4%96%E5%8D%96%E4%B8%AD%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">2.1.9.</span> <span class="toc-text">苍穹外卖中注解的作用:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mybatis"><span class="toc-number">3.</span> <span class="toc-text">Mybatis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%88%9B%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE"><span class="toc-number">4.</span> <span class="toc-text">部署服创后端项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">4.1.</span> <span class="toc-text">1.安装nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85mongodb"><span class="toc-number">4.2.</span> <span class="toc-text">2.安装mongodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85redis"><span class="toc-number">4.3.</span> <span class="toc-text">3.安装redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E5%AE%89%E8%A3%85%EF%BC%88%E9%80%82%E7%94%A8%E4%BA%8E%E5%9F%BA%E4%BA%8E-apt-%E7%9A%84%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%A6%82-Ubuntu%EF%BC%89"><span class="toc-number">4.3.1.</span> <span class="toc-text">方法一：使用包管理器安装（适用于基于 apt 的系统，如 Ubuntu）</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4a17b156.html" title="Hello World">Hello World</a><time datetime="2024-04-09T11:10:09.240Z" title="Created 2024-04-09 19:10:09">2024-04-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/0.html" title="Untitled">Untitled</a><time datetime="2024-03-25T04:09:14.715Z" title="Created 2024-03-25 12:09:14">2024-03-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By LHG</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
