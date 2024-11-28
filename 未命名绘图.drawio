@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.9.2">
+  <diagram name="第 1 页" id="zpBgYrlSRUZWEQooiNIg">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="运营人员" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry width="150" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="2">
+          <mxGeometry x="70" y="159" width="10" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="2">
+          <mxGeometry x="75" y="263" width="10" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="用户" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="792" width="150" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="3">
+          <mxGeometry x="75" y="263" width="10" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="您好！欢迎来到我们的商城。请问有什么可以帮助您的？" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="你好，我想了解一下你们商城的新优惠活动。" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="483" y="159" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="当然，我们最近推出了多种优惠活动，如满减、赠品等，请问您想了解哪一个？" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="211" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="我想了解一下关于赠品的活动详情。" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="6" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="483" y="263" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="关于赠品活动的详情可以在商城首页的banner中查看，或者您可以访问我们的优惠页面了解更多信息。" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="482" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
